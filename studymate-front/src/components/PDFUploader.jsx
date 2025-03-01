@@ -21,7 +21,10 @@ export default function PDFUploader({ onUpload }) {
     accept: { 'application/pdf': ['.pdf'] },
     maxSize: 10_000_000,
     onDrop: files => handleFileDrop(files),
-    disabled: loading
+    disabled: loading,
+    noKeyboard: true,   
+    noDrag: true        
+
   });
 
   const handleFileDrop = files => {
@@ -102,7 +105,7 @@ export default function PDFUploader({ onUpload }) {
 
       {!loading && !fileUrl && (
         <div style={{ padding: '40px 20px' }}>
-          <p>📁 Drag PDF here or click to upload</p>
+          <p>📁 Drag PDF here or Add to upload</p>
           <p style={{ fontSize: '0.9em', color: '#666' }}>
             (Max 10MB • Text-based PDFs work best)
           </p>

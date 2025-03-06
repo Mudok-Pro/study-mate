@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+
+.pdf-uploader {
+  min-height: 50vh; /* Mobile viewport height */
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    width: 100% !important; /* Full width on mobile */
+  }
+  
+  .pdf-preview {
+    transform: scale(0.8); /* Better fit for small screens */
+  }
+}
